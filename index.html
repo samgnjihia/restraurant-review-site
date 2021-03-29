@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Restaurant Review site</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    
+  </head>
+
+  <body>
+    <section class="container">
+      <section class="map-container">
+        <div>
+          <h1>RESTAURANT REVIEW SITE</h1>
+        </div>
+        <!--! Map -->
+        <section class="map" id="google-map">
+          <p class="map-loading-msg">Loading ....</p>
+        </section>
+      </section>
+
+      <section class="lists">
+        <section id="restaurants">
+          <div id="filterSection">
+            <div>
+              <h1>Right Click On the Map to Add a Reustraurant</h1>
+            </div>
+            <div>
+            </div>
+            <select id="ratingStars">
+              <option value="one-rating">1 star</option>
+              <option value="two-rating">2 stars</option>
+              <option value="three-rating">3 stars</option>
+              <option value="four-rating">4 stars</option>
+              <option value="five-rating">5 stars</option>
+            </select>
+
+            <strong>
+              <button id="btn-lg" class="button">Get Ratings</button>
+            </strong>
+          </div>
+          <!--! listing the restraurants -->
+          <ul id="restaurants-list"></ul>
+        </section>
+      </section>
+    </section>
+
+    <!-- Review section -->
+    <section id="placeDetails-section" class="modalDialog">
+      <div id="content" class="modalContent">
+        <span class="close"> &times;</span>
+        <div id="google_reviews"></div>
+        <div id="reviews-section">
+          <div id="newReviews"></div>
+          <div id="newRatings">
+            <h1>Restaurant Reviews</h1>
+            <form>
+              <div class="form-group">
+                <label for="comments"> Enter Name </label>
+                <input type="text" name="name" id="name" class="input" />
+              </div>
+              <div class="form-group">
+                <label for="stars"> Enter Star rating </label>
+                <input
+                  type="number"
+                  name="name"
+                  id="starRating"
+                  class="input"
+                  min="1"
+                  max="5"
+                />
+              </div>
+              <div class="form-group">
+                <label for="comments"> Enter Comments </label>
+                <input type="text" name="name" id="comment" class="input" />
+              </div>
+
+              <button id="ratings-button" class="button" type="button">
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section to add a new restaurant -->
+    <section id="newRestaurantSection" class="modalDialog">
+      <div id="newRestaurant"style="background-color: #ecf2f9;"  class="modalContent">
+        <span class="close"> &times;</span>
+  
+        <div id="newAddedRestaurant">
+          <h1 >Add New Restraurant</h1>
+          <form>
+            <div class="form-group">
+              <label for="restaurantName"> Enter Name  </label>
+              <input
+                type="text"
+                name="restaurant"
+                id="restaurantName"
+                class="input"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="address"> Enter address  </label>
+              <input
+                type="text"
+                name="address"
+                id="address"
+                class="input"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="rating"> Enter rating </label>
+              <select name="restaurantRating" id="restaurantRatings" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <button id="restaurantButton" class="button" type="button">
+              Add
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!--! Scripts -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key="
+      defer
+    ></script>
+    <script src="js/app.js"></script>
+    <script src="js/location.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+  <script>
+
+  </script>
+</html>
